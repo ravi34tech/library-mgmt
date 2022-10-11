@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "f194cc45-c511-4cf2-976a-72ce44528045",
+		"name": "Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book/name/Madame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"name",
+						"Madame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"author\": \"Giacomo Leopardi\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/poems-giacomo-leopardi.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"\\n\",\r\n    \"pages\": 184,\r\n    \"bookName\": \"Poems-C\",\r\n    \"year\": 1919\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/book/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"id\": 102,\r\n    \"author\": \"Giacomo Leopardi\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/poems-giacomo-leopardi.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"\\n\",\r\n    \"pages\": 184,\r\n    \"bookName\": \"Poems-C\",\r\n    \"year\": 1990\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/book/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save All Books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"author\": \"Chinua Achebe\",\r\n    \"country\": \"Nigeria\",\r\n    \"imageLink\": \"images/things-fall-apart.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Things_Fall_Apart\\n\",\r\n    \"pages\": 209,\r\n    \"bookName\": \"Things Fall Apart\",\r\n    \"year\": 1958\r\n  },\r\n  {\r\n    \"author\": \"Hans Christian Andersen\",\r\n    \"country\": \"Denmark\",\r\n    \"imageLink\": \"images/fairy-tales.jpg\",\r\n    \"language\": \"Danish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\\n\",\r\n    \"pages\": 784,\r\n    \"bookName\": \"Fairy tales\",\r\n    \"year\": 1836\r\n  },\r\n  {\r\n    \"author\": \"Dante Alighieri\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/the-divine-comedy.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Divine_Comedy\\n\",\r\n    \"pages\": 928,\r\n    \"bookName\": \"The Divine Comedy\",\r\n    \"year\": 1315\r\n  },\r\n  {\r\n    \"author\": \"Unknown\",\r\n    \"country\": \"Sumer and Akkadian Empire\",\r\n    \"imageLink\": \"images/the-epic-of-gilgamesh.jpg\",\r\n    \"language\": \"Akkadian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\\n\",\r\n    \"pages\": 160,\r\n    \"bookName\": \"The Epic Of Gilgamesh\",\r\n    \"year\": 1170\r\n  },\r\n  {\r\n    \"author\": \"Unknown\",\r\n    \"country\": \"Achaemenid Empire\",\r\n    \"imageLink\": \"images/the-book-of-job.jpg\",\r\n    \"language\": \"Hebrew\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Book_of_Job\\n\",\r\n    \"pages\": 176,\r\n    \"bookName\": \"The Book Of Job\",\r\n    \"year\": 1600\r\n  },\r\n  {\r\n    \"author\": \"Unknown\",\r\n    \"country\": \"India/Iran/Iraq/Egypt/Tajikistan\",\r\n    \"imageLink\": \"images/one-thousand-and-one-nights.jpg\",\r\n    \"language\": \"Arabic\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\\n\",\r\n    \"pages\": 288,\r\n    \"bookName\": \"One Thousand and One Nights\",\r\n    \"year\": 1200\r\n  },\r\n  {\r\n    \"author\": \"Unknown\",\r\n    \"country\": \"Iceland\",\r\n    \"imageLink\": \"images/njals-saga.jpg\",\r\n    \"language\": \"Old Norse\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\\n\",\r\n    \"pages\": 384,\r\n    \"bookName\": \"Nj\\u00e1l's Saga\",\r\n    \"year\": 1350\r\n  },\r\n  {\r\n    \"author\": \"Jane Austen\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/pride-and-prejudice.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Pride_and_Prejudice\\n\",\r\n    \"pages\": 226,\r\n    \"bookName\": \"Pride and Prejudice\",\r\n    \"year\": 1813\r\n  },\r\n  {\r\n    \"author\": \"Honor\\u00e9 de Balzac\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/le-pere-goriot.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Le_P%C3%A8re_Goriot\\n\",\r\n    \"pages\": 443,\r\n    \"bookName\": \"Le P\\u00e8re Goriot\",\r\n    \"year\": 1835\r\n  },\r\n  {\r\n    \"author\": \"Samuel Beckett\",\r\n    \"country\": \"Republic of Ireland\",\r\n    \"imageLink\": \"images/molloy-malone-dies-the-unnamable.jpg\",\r\n    \"language\": \"French, English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Molloy_(novel)\\n\",\r\n    \"pages\": 256,\r\n    \"bookName\": \"Molloy, Malone Dies, The Unnamable, the trilogy\",\r\n    \"year\": 1952\r\n  },\r\n  {\r\n    \"author\": \"Giovanni Boccaccio\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/the-decameron.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Decameron\\n\",\r\n    \"pages\": 1024,\r\n    \"bookName\": \"The Decameron\",\r\n    \"year\": 1351\r\n  },\r\n  {\r\n    \"author\": \"Jorge Luis Borges\",\r\n    \"country\": \"Argentina\",\r\n    \"imageLink\": \"images/ficciones.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Ficciones\\n\",\r\n    \"pages\": 224,\r\n    \"bookName\": \"Ficciones\",\r\n    \"year\": 1965\r\n  },\r\n  {\r\n    \"author\": \"Emily Bront\\u00eb\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/wuthering-heights.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Wuthering_Heights\\n\",\r\n    \"pages\": 342,\r\n    \"bookName\": \"Wuthering Heights\",\r\n    \"year\": 1847\r\n  },\r\n  {\r\n    \"author\": \"Albert Camus\",\r\n    \"country\": \"Algeria, French Empire\",\r\n    \"imageLink\": \"images/l-etranger.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Stranger_(novel)\\n\",\r\n    \"pages\": 185,\r\n    \"bookName\": \"The Stranger\",\r\n    \"year\": 1942\r\n  },\r\n  {\r\n    \"author\": \"Paul Celan\",\r\n    \"country\": \"Romania, France\",\r\n    \"imageLink\": \"images/poems-paul-celan.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"\\n\",\r\n    \"pages\": 320,\r\n    \"bookName\": \"Poems\",\r\n    \"year\": 1952\r\n  },\r\n  {\r\n    \"author\": \"Louis-Ferdinand C\\u00e9line\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/voyage-au-bout-de-la-nuit.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\\n\",\r\n    \"pages\": 505,\r\n    \"bookName\": \"Journey to the End of the Night\",\r\n    \"year\": 1932\r\n  },\r\n  {\r\n    \"author\": \"Miguel de Cervantes\",\r\n    \"country\": \"Spain\",\r\n    \"imageLink\": \"images/don-quijote-de-la-mancha.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Don_Quixote\\n\",\r\n    \"pages\": 1056,\r\n    \"bookName\": \"Don Quijote De La Mancha\",\r\n    \"year\": 1610\r\n  },\r\n  {\r\n    \"author\": \"Geoffrey Chaucer\",\r\n    \"country\": \"England\",\r\n    \"imageLink\": \"images/the-canterbury-tales.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Canterbury_Tales\\n\",\r\n    \"pages\": 544,\r\n    \"bookName\": \"The Canterbury Tales\",\r\n    \"year\": 1450\r\n  },\r\n  {\r\n    \"author\": \"Anton Chekhov\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/stories-of-anton-chekhov.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\\n\",\r\n    \"pages\": 194,\r\n    \"bookName\": \"Stories\",\r\n    \"year\": 1886\r\n  },\r\n  {\r\n    \"author\": \"Joseph Conrad\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/nostromo.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Nostromo\\n\",\r\n    \"pages\": 320,\r\n    \"bookName\": \"Nostromo\",\r\n    \"year\": 1904\r\n  },\r\n  {\r\n    \"author\": \"Charles Dickens\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/great-expectations.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Great_Expectations\\n\",\r\n    \"pages\": 194,\r\n    \"bookName\": \"Great Expectations\",\r\n    \"year\": 1861\r\n  },\r\n  {\r\n    \"author\": \"Denis Diderot\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/jacques-the-fatalist.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Jacques_the_Fatalist\\n\",\r\n    \"pages\": 596,\r\n    \"bookName\": \"Jacques the Fatalist\",\r\n    \"year\": 1796\r\n  },\r\n  {\r\n    \"author\": \"Alfred D\\u00f6blin\",\r\n    \"country\": \"Germany\",\r\n    \"imageLink\": \"images/berlin-alexanderplatz.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\\n\",\r\n    \"pages\": 600,\r\n    \"bookName\": \"Berlin Alexanderplatz\",\r\n    \"year\": 1929\r\n  },\r\n  {\r\n    \"author\": \"Fyodor Dostoevsky\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/crime-and-punishment.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Crime_and_Punishment\\n\",\r\n    \"pages\": 551,\r\n    \"bookName\": \"Crime and Punishment\",\r\n    \"year\": 1866\r\n  },\r\n  {\r\n    \"author\": \"Fyodor Dostoevsky\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/the-idiot.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Idiot\\n\",\r\n    \"pages\": 656,\r\n    \"bookName\": \"The Idiot\",\r\n    \"year\": 1869\r\n  },\r\n  {\r\n    \"author\": \"Fyodor Dostoevsky\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/the-possessed.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\\n\",\r\n    \"pages\": 768,\r\n    \"bookName\": \"The Possessed\",\r\n    \"year\": 1872\r\n  },\r\n  {\r\n    \"author\": \"Fyodor Dostoevsky\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/the-brothers-karamazov.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Brothers_Karamazov\\n\",\r\n    \"pages\": 824,\r\n    \"bookName\": \"The Brothers Karamazov\",\r\n    \"year\": 1880\r\n  },\r\n  {\r\n    \"author\": \"George Eliot\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/middlemarch.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Middlemarch\\n\",\r\n    \"pages\": 800,\r\n    \"bookName\": \"Middlemarch\",\r\n    \"year\": 1871\r\n  },\r\n  {\r\n    \"author\": \"Ralph Ellison\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/invisible-man.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Invisible_Man\\n\",\r\n    \"pages\": 581,\r\n    \"bookName\": \"Invisible Man\",\r\n    \"year\": 1952\r\n  },\r\n  {\r\n    \"author\": \"Euripides\",\r\n    \"country\": \"Greece\",\r\n    \"imageLink\": \"images/medea.jpg\",\r\n    \"language\": \"Greek\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Medea_(play)\\n\",\r\n    \"pages\": 104,\r\n    \"bookName\": \"Medea\",\r\n    \"year\": 1431\r\n  },\r\n  {\r\n    \"author\": \"William Faulkner\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/absalom-absalom.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Absalom,_Absalom!\\n\",\r\n    \"pages\": 313,\r\n    \"bookName\": \"Absalom, Absalom!\",\r\n    \"year\": 1936\r\n  },\r\n  {\r\n    \"author\": \"William Faulkner\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/the-sound-and-the-fury.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\\n\",\r\n    \"pages\": 326,\r\n    \"bookName\": \"The Sound and the Fury\",\r\n    \"year\": 1929\r\n  },\r\n  {\r\n    \"author\": \"Gustave Flaubert\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/madame-bovary.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Madame_Bovary\\n\",\r\n    \"pages\": 528,\r\n    \"bookName\": \"Madame Bovary\",\r\n    \"year\": 1857\r\n  },\r\n  {\r\n    \"author\": \"Gustave Flaubert\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/l-education-sentimentale.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Sentimental_Education\\n\",\r\n    \"pages\": 606,\r\n    \"bookName\": \"Sentimental Education\",\r\n    \"year\": 1869\r\n  },\r\n  {\r\n    \"author\": \"Federico Garc\\u00eda Lorca\",\r\n    \"country\": \"Spain\",\r\n    \"imageLink\": \"images/gypsy-ballads.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Gypsy_Ballads\\n\",\r\n    \"pages\": 218,\r\n    \"bookName\": \"Gypsy Ballads\",\r\n    \"year\": 1928\r\n  },\r\n  {\r\n    \"author\": \"Gabriel Garc\\u00eda M\\u00e1rquez\",\r\n    \"country\": \"Colombia\",\r\n    \"imageLink\": \"images/one-hundred-years-of-solitude.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\\n\",\r\n    \"pages\": 417,\r\n    \"bookName\": \"One Hundred Years of Solitude\",\r\n    \"year\": 1967\r\n  },\r\n  {\r\n    \"author\": \"Gabriel Garc\\u00eda M\\u00e1rquez\",\r\n    \"country\": \"Colombia\",\r\n    \"imageLink\": \"images/love-in-the-time-of-cholera.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\\n\",\r\n    \"pages\": 368,\r\n    \"bookName\": \"Love in the Time of Cholera\",\r\n    \"year\": 1985\r\n  },\r\n  {\r\n    \"author\": \"Johann Wolfgang von Goethe\",\r\n    \"country\": \"Saxe-Weimar\",\r\n    \"imageLink\": \"images/faust.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Goethe%27s_Faust\\n\",\r\n    \"pages\": 158,\r\n    \"bookName\": \"Faust\",\r\n    \"year\": 1832\r\n  },\r\n  {\r\n    \"author\": \"Nikolai Gogol\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/dead-souls.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Dead_Souls\\n\",\r\n    \"pages\": 432,\r\n    \"bookName\": \"Dead Souls\",\r\n    \"year\": 1842\r\n  },\r\n  {\r\n    \"author\": \"G\\u00fcnter Grass\",\r\n    \"country\": \"Germany\",\r\n    \"imageLink\": \"images/the-tin-drum.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Tin_Drum\\n\",\r\n    \"pages\": 600,\r\n    \"bookName\": \"The Tin Drum\",\r\n    \"year\": 1959\r\n  },\r\n  {\r\n    \"author\": \"Jo\\u00e3o Guimar\\u00e3es Rosa\",\r\n    \"country\": \"Brazil\",\r\n    \"imageLink\": \"images/the-devil-to-pay-in-the-backlands.jpg\",\r\n    \"language\": \"Portuguese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\\n\",\r\n    \"pages\": 494,\r\n    \"bookName\": \"The Devil to Pay in the Backlands\",\r\n    \"year\": 1956\r\n  },\r\n  {\r\n    \"author\": \"Knut Hamsun\",\r\n    \"country\": \"Norway\",\r\n    \"imageLink\": \"images/hunger.jpg\",\r\n    \"language\": \"Norwegian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\\n\",\r\n    \"pages\": 176,\r\n    \"bookName\": \"Hunger\",\r\n    \"year\": 1890\r\n  },\r\n  {\r\n    \"author\": \"Ernest Hemingway\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/the-old-man-and-the-sea.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\\n\",\r\n    \"pages\": 128,\r\n    \"bookName\": \"The Old Man and the Sea\",\r\n    \"year\": 1952\r\n  },\r\n  {\r\n    \"author\": \"Homer\",\r\n    \"country\": \"Greece\",\r\n    \"imageLink\": \"images/the-iliad-of-homer.jpg\",\r\n    \"language\": \"Greek\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Iliad\\n\",\r\n    \"pages\": 608,\r\n    \"bookName\": \"Iliad\",\r\n    \"year\": 1735\r\n  },\r\n  {\r\n    \"author\": \"Homer\",\r\n    \"country\": \"Greece\",\r\n    \"imageLink\": \"images/the-odyssey-of-homer.jpg\",\r\n    \"language\": \"Greek\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Odyssey\\n\",\r\n    \"pages\": 374,\r\n    \"bookName\": \"Odyssey\",\r\n    \"year\": 1800\r\n  },\r\n  {\r\n    \"author\": \"Henrik Ibsen\",\r\n    \"country\": \"Norway\",\r\n    \"imageLink\": \"images/a-Dolls-house.jpg\",\r\n    \"language\": \"Norwegian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/A_Doll%27s_House\\n\",\r\n    \"pages\": 68,\r\n    \"bookName\": \"A Doll's House\",\r\n    \"year\": 1879\r\n  },\r\n  {\r\n    \"author\": \"James Joyce\",\r\n    \"country\": \"Irish Free State\",\r\n    \"imageLink\": \"images/ulysses.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Ulysses_(novel)\\n\",\r\n    \"pages\": 228,\r\n    \"bookName\": \"Ulysses\",\r\n    \"year\": 1922\r\n  },\r\n  {\r\n    \"author\": \"Franz Kafka\",\r\n    \"country\": \"Czechoslovakia\",\r\n    \"imageLink\": \"images/stories-of-franz-kafka.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Franz_Kafka_bibliography#Short_stories\\n\",\r\n    \"pages\": 488,\r\n    \"bookName\": \"Stories\",\r\n    \"year\": 1924\r\n  },\r\n  {\r\n    \"author\": \"Franz Kafka\",\r\n    \"country\": \"Czechoslovakia\",\r\n    \"imageLink\": \"images/the-trial.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Trial\\n\",\r\n    \"pages\": 160,\r\n    \"bookName\": \"The Trial\",\r\n    \"year\": 1925\r\n  },\r\n  {\r\n    \"author\": \"Franz Kafka\",\r\n    \"country\": \"Czechoslovakia\",\r\n    \"imageLink\": \"images/the-castle.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Castle_(novel)\\n\",\r\n    \"pages\": 352,\r\n    \"bookName\": \"The Castle\",\r\n    \"year\": 1926\r\n  },\r\n  {\r\n    \"author\": \"K\\u0101lid\\u0101sa\",\r\n    \"country\": \"India\",\r\n    \"imageLink\": \"images/the-recognition-of-shakuntala.jpg\",\r\n    \"language\": \"Sanskrit\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Abhij%C3%B1%C4%81na%C5%9B%C4%81kuntalam\\n\",\r\n    \"pages\": 147,\r\n    \"bookName\": \"The recognition of Shakuntala\",\r\n    \"year\": 150\r\n  },\r\n  {\r\n    \"author\": \"Yasunari Kawabata\",\r\n    \"country\": \"Japan\",\r\n    \"imageLink\": \"images/the-sound-of-the-mountain.jpg\",\r\n    \"language\": \"Japanese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\\n\",\r\n    \"pages\": 288,\r\n    \"bookName\": \"The Sound of the Mountain\",\r\n    \"year\": 1954\r\n  },\r\n  {\r\n    \"author\": \"Nikos Kazantzakis\",\r\n    \"country\": \"Greece\",\r\n    \"imageLink\": \"images/zorba-the-greek.jpg\",\r\n    \"language\": \"Greek\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Zorba_the_Greek\\n\",\r\n    \"pages\": 368,\r\n    \"bookName\": \"Zorba the Greek\",\r\n    \"year\": 1946\r\n  },\r\n  {\r\n    \"author\": \"D. H. Lawrence\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/sons-and-lovers.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Sons_and_Lovers\\n\",\r\n    \"pages\": 432,\r\n    \"bookName\": \"Sons and Lovers\",\r\n    \"year\": 1913\r\n  },\r\n  {\r\n    \"author\": \"Halld\\u00f3r Laxness\",\r\n    \"country\": \"Iceland\",\r\n    \"imageLink\": \"images/independent-people.jpg\",\r\n    \"language\": \"Icelandic\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Independent_People\\n\",\r\n    \"pages\": 470,\r\n    \"bookName\": \"Independent People\",\r\n    \"year\": 1934\r\n  },\r\n  {\r\n    \"author\": \"Giacomo Leopardi\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/poems-giacomo-leopardi.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"\\n\",\r\n    \"pages\": 184,\r\n    \"bookName\": \"Poems\",\r\n    \"year\": 1818\r\n  },\r\n  {\r\n    \"author\": \"Doris Lessing\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/the-golden-notebook.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Golden_Notebook\\n\",\r\n    \"pages\": 688,\r\n    \"bookName\": \"The Golden Notebook\",\r\n    \"year\": 1962\r\n  },\r\n  {\r\n    \"author\": \"Astrid Lindgren\",\r\n    \"country\": \"Sweden\",\r\n    \"imageLink\": \"images/pippi-longstocking.jpg\",\r\n    \"language\": \"Swedish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Pippi_Longstocking\\n\",\r\n    \"pages\": 160,\r\n    \"bookName\": \"Pippi Longstocking\",\r\n    \"year\": 1945\r\n  },\r\n  {\r\n    \"author\": \"Lu Xun\",\r\n    \"country\": \"China\",\r\n    \"imageLink\": \"images/diary-of-a-madman.jpg\",\r\n    \"language\": \"Chinese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/A_Madman%27s_Diary\\n\",\r\n    \"pages\": 389,\r\n    \"bookName\": \"Diary of a Madman\",\r\n    \"year\": 1918\r\n  },\r\n  {\r\n    \"author\": \"Naguib Mahfouz\",\r\n    \"country\": \"Egypt\",\r\n    \"imageLink\": \"images/children-of-gebelawi.jpg\",\r\n    \"language\": \"Arabic\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Children_of_Gebelawi\\n\",\r\n    \"pages\": 355,\r\n    \"bookName\": \"Children of Gebelawi\",\r\n    \"year\": 1959\r\n  },\r\n  {\r\n    \"author\": \"Thomas Mann\",\r\n    \"country\": \"Germany\",\r\n    \"imageLink\": \"images/buddenbrooks.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Buddenbrooks\\n\",\r\n    \"pages\": 736,\r\n    \"bookName\": \"Buddenbrooks\",\r\n    \"year\": 1901\r\n  },\r\n  {\r\n    \"author\": \"Thomas Mann\",\r\n    \"country\": \"Germany\",\r\n    \"imageLink\": \"images/the-magic-mountain.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Magic_Mountain\\n\",\r\n    \"pages\": 720,\r\n    \"bookName\": \"The Magic Mountain\",\r\n    \"year\": 1924\r\n  },\r\n  {\r\n    \"author\": \"Herman Melville\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/moby-dick.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Moby-Dick\\n\",\r\n    \"pages\": 378,\r\n    \"bookName\": \"Moby Dick\",\r\n    \"year\": 1851\r\n  },\r\n  {\r\n    \"author\": \"Michel de Montaigne\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/essais.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Essays_(Montaigne)\\n\",\r\n    \"pages\": 404,\r\n    \"bookName\": \"Essays\",\r\n    \"year\": 1595\r\n  },\r\n  {\r\n    \"author\": \"Elsa Morante\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/history.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/History_(novel)\\n\",\r\n    \"pages\": 600,\r\n    \"bookName\": \"History\",\r\n    \"year\": 1974\r\n  },\r\n  {\r\n    \"author\": \"Toni Morrison\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/beloved.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Beloved_(novel)\\n\",\r\n    \"pages\": 321,\r\n    \"bookName\": \"Beloved\",\r\n    \"year\": 1987\r\n  },\r\n  {\r\n    \"author\": \"Murasaki Shikibu\",\r\n    \"country\": \"Japan\",\r\n    \"imageLink\": \"images/the-tale-of-genji.jpg\",\r\n    \"language\": \"Japanese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Tale_of_Genji\\n\",\r\n    \"pages\": 1360,\r\n    \"bookName\": \"The Tale of Genji\",\r\n    \"year\": 1006\r\n  },\r\n  {\r\n    \"author\": \"Robert Musil\",\r\n    \"country\": \"Austria\",\r\n    \"imageLink\": \"images/the-man-without-qualities.jpg\",\r\n    \"language\": \"German\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Man_Without_Qualities\\n\",\r\n    \"pages\": 365,\r\n    \"bookName\": \"The Man Without Qualities\",\r\n    \"year\": 1931\r\n  },\r\n  {\r\n    \"author\": \"Vladimir Nabokov\",\r\n    \"country\": \"Russia/United States\",\r\n    \"imageLink\": \"images/lolita.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Lolita\\n\",\r\n    \"pages\": 317,\r\n    \"bookName\": \"Lolita\",\r\n    \"year\": 1955\r\n  },\r\n  {\r\n    \"author\": \"George Orwell\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/nineteen-eighty-four.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\\n\",\r\n    \"pages\": 272,\r\n    \"bookName\": \"Nineteen Eighty-Four\",\r\n    \"year\": 1949\r\n  },\r\n  {\r\n    \"author\": \"Ovid\",\r\n    \"country\": \"Roman Empire\",\r\n    \"imageLink\": \"images/the-metamorphoses-of-ovid.jpg\",\r\n    \"language\": \"Classical Latin\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Metamorphoses\\n\",\r\n    \"pages\": 576,\r\n    \"bookName\": \"Metamorphoses\",\r\n    \"year\": 100\r\n  },\r\n  {\r\n    \"author\": \"Fernando Pessoa\",\r\n    \"country\": \"Portugal\",\r\n    \"imageLink\": \"images/the-book-of-disquiet.jpg\",\r\n    \"language\": \"Portuguese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Book_of_Disquiet\\n\",\r\n    \"pages\": 272,\r\n    \"bookName\": \"The Book of Disquiet\",\r\n    \"year\": 1928\r\n  },\r\n  {\r\n    \"author\": \"Edgar Allan Poe\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/tales-and-poems-of-edgar-allan-poe.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\\n\",\r\n    \"pages\": 842,\r\n    \"bookName\": \"Tales\",\r\n    \"year\": 1950\r\n  },\r\n  {\r\n    \"author\": \"Marcel Proust\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/a-la-recherche-du-temps-perdu.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\\n\",\r\n    \"pages\": 2408,\r\n    \"bookName\": \"In Search of Lost Time\",\r\n    \"year\": 1920\r\n  },\r\n  {\r\n    \"author\": \"Fran\\u00e7ois Rabelais\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/gargantua-and-pantagruel.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\\n\",\r\n    \"pages\": 623,\r\n    \"bookName\": \"Gargantua and Pantagruel\",\r\n    \"year\": 1533\r\n  },\r\n  {\r\n    \"author\": \"Juan Rulfo\",\r\n    \"country\": \"Mexico\",\r\n    \"imageLink\": \"images/pedro-paramo.jpg\",\r\n    \"language\": \"Spanish\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\\n\",\r\n    \"pages\": 124,\r\n    \"bookName\": \"Pedro P\\u00e1ramo\",\r\n    \"year\": 1955\r\n  },\r\n  {\r\n    \"author\": \"Rumi\",\r\n    \"country\": \"Sultanate of Rum\",\r\n    \"imageLink\": \"images/the-masnavi.jpg\",\r\n    \"language\": \"Persian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Masnavi\\n\",\r\n    \"pages\": 438,\r\n    \"bookName\": \"The Masnavi\",\r\n    \"year\": 1236\r\n  },\r\n  {\r\n    \"author\": \"Salman Rushdie\",\r\n    \"country\": \"United Kingdom, India\",\r\n    \"imageLink\": \"images/midnights-children.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Midnight%27s_Children\\n\",\r\n    \"pages\": 536,\r\n    \"bookName\": \"Midnight's Children\",\r\n    \"year\": 1981\r\n  },\r\n  {\r\n    \"author\": \"Saadi\",\r\n    \"country\": \"Persia, Persian Empire\",\r\n    \"imageLink\": \"images/bostan.jpg\",\r\n    \"language\": \"Persian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Bustan_(book)\\n\",\r\n    \"pages\": 298,\r\n    \"bookName\": \"Bostan\",\r\n    \"year\": 1257\r\n  },\r\n  {\r\n    \"author\": \"Tayeb Salih\",\r\n    \"country\": \"Sudan\",\r\n    \"imageLink\": \"images/season-of-migration-to-the-north.jpg\",\r\n    \"language\": \"Arabic\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\\n\",\r\n    \"pages\": 139,\r\n    \"bookName\": \"Season of Migration to the North\",\r\n    \"year\": 1966\r\n  },\r\n  {\r\n    \"author\": \"Jos\\u00e9 Saramago\",\r\n    \"country\": \"Portugal\",\r\n    \"imageLink\": \"images/blindness.jpg\",\r\n    \"language\": \"Portuguese\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Blindness_(novel)\\n\",\r\n    \"pages\": 352,\r\n    \"bookName\": \"Blindness\",\r\n    \"year\": 1995\r\n  },\r\n  {\r\n    \"author\": \"William Shakespeare\",\r\n    \"country\": \"England\",\r\n    \"imageLink\": \"images/hamlet.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Hamlet\\n\",\r\n    \"pages\": 432,\r\n    \"bookName\": \"Hamlet\",\r\n    \"year\": 1603\r\n  },\r\n  {\r\n    \"author\": \"William Shakespeare\",\r\n    \"country\": \"England\",\r\n    \"imageLink\": \"images/king-lear.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/King_Lear\\n\",\r\n    \"pages\": 384,\r\n    \"bookName\": \"King Lear\",\r\n    \"year\": 1608\r\n  },\r\n  {\r\n    \"author\": \"William Shakespeare\",\r\n    \"country\": \"England\",\r\n    \"imageLink\": \"images/othello.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Othello\\n\",\r\n    \"pages\": 314,\r\n    \"bookName\": \"Othello\",\r\n    \"year\": 1609\r\n  },\r\n  {\r\n    \"author\": \"Sophocles\",\r\n    \"country\": \"Greece\",\r\n    \"imageLink\": \"images/oedipus-the-king.jpg\",\r\n    \"language\": \"Greek\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Oedipus_the_King\\n\",\r\n    \"pages\": 88,\r\n    \"bookName\": \"Oedipus the King\",\r\n    \"year\": 1430\r\n  },\r\n  {\r\n    \"author\": \"Stendhal\",\r\n    \"country\": \"France\",\r\n    \"imageLink\": \"images/le-rouge-et-le-noir.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Red_and_the_Black\\n\",\r\n    \"pages\": 576,\r\n    \"bookName\": \"The Red and the Black\",\r\n    \"year\": 1830\r\n  },\r\n  {\r\n    \"author\": \"Laurence Sterne\",\r\n    \"country\": \"England\",\r\n    \"imageLink\": \"images/the-life-and-opinions-of-tristram-shandy.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\\n\",\r\n    \"pages\": 640,\r\n    \"bookName\": \"The Life And Opinions of Tristram Shandy\",\r\n    \"year\": 1760\r\n  },\r\n  {\r\n    \"author\": \"Italo Svevo\",\r\n    \"country\": \"Italy\",\r\n    \"imageLink\": \"images/confessions-of-zeno.jpg\",\r\n    \"language\": \"Italian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Zeno%27s_Conscience\\n\",\r\n    \"pages\": 412,\r\n    \"bookName\": \"Confessions of Zeno\",\r\n    \"year\": 1923\r\n  },\r\n  {\r\n    \"author\": \"Jonathan Swift\",\r\n    \"country\": \"Ireland\",\r\n    \"imageLink\": \"images/gullivers-travels.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Gulliver%27s_Travels\\n\",\r\n    \"pages\": 178,\r\n    \"bookName\": \"Gulliver's Travels\",\r\n    \"year\": 1726\r\n  },\r\n  {\r\n    \"author\": \"Leo Tolstoy\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/war-and-peace.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/War_and_Peace\\n\",\r\n    \"pages\": 1296,\r\n    \"bookName\": \"War and Peace\",\r\n    \"year\": 1867\r\n  },\r\n  {\r\n    \"author\": \"Leo Tolstoy\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/anna-karenina.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Anna_Karenina\\n\",\r\n    \"pages\": 864,\r\n    \"bookName\": \"Anna Karenina\",\r\n    \"year\": 1877\r\n  },\r\n  {\r\n    \"author\": \"Leo Tolstoy\",\r\n    \"country\": \"Russia\",\r\n    \"imageLink\": \"images/the-death-of-ivan-ilyich.jpg\",\r\n    \"language\": \"Russian\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\\n\",\r\n    \"pages\": 92,\r\n    \"bookName\": \"The Death of Ivan Ilyich\",\r\n    \"year\": 1886\r\n  },\r\n  {\r\n    \"author\": \"Mark Twain\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/the-adventures-of-huckleberry-finn.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\\n\",\r\n    \"pages\": 224,\r\n    \"bookName\": \"The Adventures of Huckleberry Finn\",\r\n    \"year\": 1884\r\n  },\r\n  {\r\n    \"author\": \"Valmiki\",\r\n    \"country\": \"India\",\r\n    \"imageLink\": \"images/ramayana.jpg\",\r\n    \"language\": \"Sanskrit\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Ramayana\\n\",\r\n    \"pages\": 152,\r\n    \"bookName\": \"Ramayana\",\r\n    \"year\": 1450\r\n  },\r\n  {\r\n    \"author\": \"Virgil\",\r\n    \"country\": \"Roman Empire\",\r\n    \"imageLink\": \"images/the-aeneid.jpg\",\r\n    \"language\": \"Classical Latin\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Aeneid\\n\",\r\n    \"pages\": 442,\r\n    \"bookName\": \"The Aeneid\",\r\n    \"year\": 123\r\n  },\r\n  {\r\n    \"author\": \"Vyasa\",\r\n    \"country\": \"India\",\r\n    \"imageLink\": \"images/the-mahab-harata.jpg\",\r\n    \"language\": \"Sanskrit\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Mahabharata\\n\",\r\n    \"pages\": 276,\r\n    \"bookName\": \"Mahabharata\",\r\n    \"year\": 1700\r\n  },\r\n  {\r\n    \"author\": \"Walt Whitman\",\r\n    \"country\": \"United States\",\r\n    \"imageLink\": \"images/leaves-of-grass.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Leaves_of_Grass\\n\",\r\n    \"pages\": 152,\r\n    \"bookName\": \"Leaves of Grass\",\r\n    \"year\": 1855\r\n  },\r\n  {\r\n    \"author\": \"Virginia Woolf\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/mrs-dalloway.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Mrs_Dalloway\\n\",\r\n    \"pages\": 216,\r\n    \"bookName\": \"Mrs Dalloway\",\r\n    \"year\": 1925\r\n  },\r\n  {\r\n    \"author\": \"Virginia Woolf\",\r\n    \"country\": \"United Kingdom\",\r\n    \"imageLink\": \"images/to-the-lighthouse.jpg\",\r\n    \"language\": \"English\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/To_the_Lighthouse\\n\",\r\n    \"pages\": 209,\r\n    \"bookName\": \"To the Lighthouse\",\r\n    \"year\": 1927\r\n  },\r\n  {\r\n    \"author\": \"Marguerite Yourcenar\",\r\n    \"country\": \"France/Belgium\",\r\n    \"imageLink\": \"images/memoirs-of-hadrian.jpg\",\r\n    \"language\": \"French\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\\n\",\r\n    \"pages\": 408,\r\n    \"bookName\": \"Memoirs of Hadrian\",\r\n    \"year\": 1951\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/book/save-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"save-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACtuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/management/metrics/hikaricp.connections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"management",
+						"metrics",
+						"hikaricp.connections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books By Author Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book/author/william",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"author",
+						"william"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books By Country Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/book/country?country=UniteD KingdoM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book",
+						"country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "UniteD KingdoM"
+						},
+						{
+							"key": "Test",
+							"value": "Test",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

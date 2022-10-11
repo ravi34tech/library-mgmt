@@ -1,0 +1,30 @@
+1.For swagger Access
+    http://localhost:8181/swagger-ui/
+
+    https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+2. Actuator details notes
+
+     Accessing actuator --> http://localhost:8181/actuator/
+     But configured in prop file, so have to access actuator services like  ---> http://localhost:8181/management/
+
+     https://www.digitalocean.com/community/tutorials/spring-boot-actuator-endpoints
+     https://docs.spring.io/spring-boot/docs/2.1.11.RELEASE/reference/html/production-ready-endpoints.html
+
+
+3. Run the springBoot app through the command prompt
+
+        java -jar target/library-mgmt-1.0.0-SNAPSHOT.jar
+                (OR)
+        mvn spring-boot:run
+
+    https://www.appsdeveloperblog.com/run-spring-boot-app-from-a-command-line/
+
+4. Testing Application
+
+    https://www.baeldung.com/spring-boot-testing
+
+
+API Information collected:
+-----------------------
+https://www.baeldung.com/spring-jpa-like-queries
